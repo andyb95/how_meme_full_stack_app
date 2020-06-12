@@ -11,7 +11,7 @@ class Favorites extends Component {
 						return (
 							<Meme
 								key={element.id}
-                                memeInfo={element}
+                memeInfo={element}
 							/>
 						);
 					})}
@@ -23,8 +23,8 @@ class Favorites extends Component {
 
 function mapStateToProps(state) {
 	return {
-		favorites: state.reducer.favrited
+		favorites: state.reducer.favorited
 	};
 }
 
-export default connect()(Favorites);
+export default connect(mapStateToProps)(Favorites);
